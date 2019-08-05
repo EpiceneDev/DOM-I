@@ -73,3 +73,10 @@ document.querySelector('.bottom-content .text-content:nth-child(2) h4').textCont
 document.querySelector('.bottom-content .text-content:nth-child(2) p').textContent = siteContent['main-content']["product-content"];
 document.querySelector('.bottom-content .text-content:nth-child(3) h4').textContent = siteContent['main-content']["vision-h4"];
 document.querySelector('.bottom-content .text-content:nth-child(3) p').textContent = siteContent['main-content']["vision-content"];
+
+// Contact
+let contactArray = Object.values(siteContent['contact'])
+console.log(contactArray);
+for (i = 0; i < contactArray.length; i++) {
+  document.querySelector(`.contact *:nth-child(${i + 1})`).textContent = contactArray[i]  
+}
