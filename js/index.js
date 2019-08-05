@@ -44,9 +44,21 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // Navigation Bar
 const links = document.getElementsByTagName("a");
 console.log("links: ", links);
-Array.from(links).forEach((a, id) => {
+const navArray = Array.from(links).forEach((a, id) => {
   a.textContent = siteContent["nav"][`nav-item-${id}`]
 })
+;
+//Add new elements
+let createLogin = document.createElement("a");
+createLogin.textContent = "Login";
+let createHelp = document.createElement("a");
+createHelp.textContent = "Help";
+
+//Add child at start
+document.querySelector("nav").prepend(createLogin);
+
+//add child at end
+document.querySelector('nav').append(createHelp);
 
 // CTA ...center text's headline, image and button
 
@@ -83,7 +95,9 @@ for (i = 0; i < contactArray.length; i++) {
 document.querySelector("footer p").textContent = siteContent["footer"]["copyright"];
 
 // Change Nav text to green
-
 for (i = 0; i < Array.from(document.querySelectorAll('nav a')).length; i++) {
-  document.querySelectorAll('nav a')[i].style.color = 'green'
-}
+  document.querySelectorAll('nav a')[i].style.color = 'green';
+};
+
+// Add nav item using append and prepend
+links.append = document.createElement("a").textContent
