@@ -62,6 +62,10 @@ document.querySelector('.top-content .text-content:nth-child(1) p').textContent 
 document.querySelector('.top-content .text-content:nth-child(2) h4').textContent = siteContent['main-content']["about-h4"];
 document.querySelector('.top-content .text-content:nth-child(2) p').textContent = siteContent['main-content']["about-content"];
 
+let pic = document.getElementById("middle-img");
+pic.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
 // Main Content BOTTOM
 document.querySelector('.bottom-content .text-content:nth-child(1) h4').textContent = siteContent['main-content']["services-h4"];
 document.querySelector('.bottom-content .text-content:nth-child(1) p').textContent = siteContent['main-content']["services-content"];
