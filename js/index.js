@@ -103,4 +103,6 @@ for (i = 0; i < Array.from(document.querySelectorAll('nav a')).length; i++) {
 };
 
 // STRETCH Style
-// document.querySelector(".container").style["max-width"] = 1000px;
+// document.querySelector(".container").style("max-width") = 1000px;
+// document.querySelector('footer').style("color") = "red";
+document.querySelector('footer').setAttribute("style", "color:red; border: 1px solid grey; padding: 3px;");
