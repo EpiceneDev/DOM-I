@@ -80,3 +80,6 @@ console.log(contactArray);
 for (i = 0; i < contactArray.length; i++) {
   document.querySelector(`.contact *:nth-child(${i + 1})`).textContent = contactArray[i]  
 }
+
+// Footer
+document.querySelector("footer p").textContent = siteContent["footer"]["copyright"];
