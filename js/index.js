@@ -67,5 +67,5 @@ document.querySelector('.bottom-content .text-content:nth-child(1) h4').textCont
 document.querySelector('.bottom-content .text-content:nth-child(1) p').textContent = siteContent['main-content']["services-content"];
 document.querySelector('.bottom-content .text-content:nth-child(2) h4').textContent = siteContent['main-content']["product-h4"];
 document.querySelector('.bottom-content .text-content:nth-child(2) p').textContent = siteContent['main-content']["product-content"];
-document.querySelector('.bottom-content .text-content:nth-child(1) h4').textContent = siteContent['main-content']["vision-h4"];
-document.querySelector('.bottom-content .text-content:nth-child(1) p').textContent = siteContent['main-content']["vision-content"];
+document.querySelector('.bottom-content .text-content:nth-child(3) h4').textContent = siteContent['main-content']["vision-h4"];
+document.querySelector('.bottom-content .text-content:nth-child(3) p').textContent = siteContent['main-content']["vision-content"];
