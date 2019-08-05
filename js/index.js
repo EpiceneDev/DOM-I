@@ -45,14 +45,16 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const links = document.getElementsByTagName("a");
 console.log("links: ", links);
 const navArray = Array.from(links).forEach((a, id) => {
-  a.textContent = siteContent["nav"][`nav-item-${id}`]
-})
-;
-//Add new elements
+  a.textContent = siteContent["nav"][`nav-item-${id +1}`]
+});
+
+// Create new elements and their content
 let createLogin = document.createElement("a");
 createLogin.textContent = "Login";
+createLogin.setAttribute('href', "#");
 let createHelp = document.createElement("a");
 createHelp.textContent = "Help";
+createHelp.setAttribute('href', "#");
 
 //Add child at start
 document.querySelector("nav").prepend(createLogin);
@@ -72,6 +74,7 @@ document.querySelector('.top-content .text-content:nth-child(1) p').textContent 
 document.querySelector('.top-content .text-content:nth-child(2) h4').textContent = siteContent['main-content']["about-h4"];
 document.querySelector('.top-content .text-content:nth-child(2) p').textContent = siteContent['main-content']["about-content"];
 
+// Main Content PICTURE
 let pic = document.getElementById("middle-img");
 pic.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
@@ -98,6 +101,3 @@ document.querySelector("footer p").textContent = siteContent["footer"]["copyrigh
 for (i = 0; i < Array.from(document.querySelectorAll('nav a')).length; i++) {
   document.querySelectorAll('nav a')[i].style.color = 'green';
 };
-
-// Add nav item using append and prepend
-links.append = document.createElement("a").textContent
