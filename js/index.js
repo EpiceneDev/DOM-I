@@ -42,11 +42,9 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Navigation Bar
-
-const links = document.getElementsByTagName("nav")[0].childNodes;
-//console.log(links);
-Array.from(links);
-links.forEach((a, id) => {
+const links = document.getElementsByTagName("a");
+console.log("links: ", links);
+Array.from(links).forEach((a, id) => {
   a.textContent = siteContent["nav"][`nav-item-${id}`]
 })
 
@@ -83,3 +81,9 @@ for (i = 0; i < contactArray.length; i++) {
 
 // Footer
 document.querySelector("footer p").textContent = siteContent["footer"]["copyright"];
+
+// Change Nav text to green
+
+for (i = 0; i < Array.from(document.querySelectorAll('nav a')).length; i++) {
+  document.querySelectorAll('nav a')[i].style.color = 'green'
+}
