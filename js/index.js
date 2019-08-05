@@ -101,3 +101,6 @@ document.querySelector("footer p").textContent = siteContent["footer"]["copyrigh
 for (i = 0; i < Array.from(document.querySelectorAll('nav a')).length; i++) {
   document.querySelectorAll('nav a')[i].style.color = 'green';
 };
+
+// STRETCH Style
+// document.querySelector(".container").style["max-width"] = 1000px;
