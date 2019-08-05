@@ -41,12 +41,16 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// Navigation Bar
 const links = document.getElementsByTagName("nav")[0].childNodes;
 console.log(links);
 Array.from(links);
 links.forEach((a, id) => {
   a.textContent = siteContent["nav"][`nav-item-${id}`]
-}).
-Array.from(document.getElementsByTagName("nav")[0].childNodes)
-    .filter(e => e.tagName === 'A')
-    .forEach((a, idx) => a.textContent = siteContent["nav"][`nav-item-${id}`]);
+})
+
+// CTA ...center text's headline, image and button
+
+document.querySelector(".cta-text h1").textContent = siteContent["cta"]["h1"];
+document.querySelector(".cta-text button").textContent = siteContent["cta"]["button"];
+document.getElementById("cta-img").setAttribute('src', siteContent["cta"]["img-src"]);
